@@ -5,86 +5,152 @@ class TravelPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(13),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.arrow_back_sharp,
-                      size: 30,
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      physics: ScrollPhysics(),
+      child: Scaffold(
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(13),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.west,
+                        size: 30,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 70,
-                  ),
-                  const Text(
-                    'Путешествия',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-              const Column(
-                children: [
-                  Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: 15),
-                        child: Text(
-                          'Топ городов',
-                          style: TextStyle(
-                              fontSize: 22, fontWeight: FontWeight.bold),
-                        ),
+                    const SizedBox(
+                      width: 70,
+                    ),
+                    const Text(
+                      'Путешествия',
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
                       ),
-                      SizedBox(
-                        width: 85,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            'ПОСМОТРЕТЬ ВСЕ',
+                    ),
+                  ],
+                ),
+                const Column(
+                  children: [
+                    Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 15),
+                          child: Text(
+                            'Топ городов',
                             style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 115, 149, 207),
-                            ),
+                                fontSize: 22, fontWeight: FontWeight.bold),
                           ),
-                        ],
+                        ),
+                        SizedBox(
+                          width: 85,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              'ПОСМОТРЕТЬ ВСЕ',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 115, 149, 207),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const Row(
+                  children: [
+                    CustomImage(
+                      image: 'image',
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Text(
+                  'Путешествия по КР',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                ),
+                const Row(
+                  children: [
+                    ImageTour(
+                      image: 'image',
+                    ),
+                  ],
+                ),
+                const Text(
+                  'ПОСМОТРЕТЬ ВСЕ',
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 124, 181, 228),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(15),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 1,
+                        blurRadius: 3,
                       ),
                     ],
                   ),
-                ],
-              ),
-              const Row(
-                children: [
-                  CustomImage(
-                    image: 'image',
+                  child: Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Image.asset(
+                          'assets/tokio.png',
+                          fit: BoxFit.cover,
+                        ),
+                        Column(
+                          children: [
+                            const Row(
+                              children: [
+                                Text(
+                                  'Чат "Путешествия"',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: const Text(
+                                'Присоединиться',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                ],
-              ),
-              const Text(
-                'Путешествия по КР',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-              ),
-              Row(
-                children: [
-                  ImageTour(
-                    image: 'image',
-                  ),
-                ],
-              ),
-
-              //  SingleChildScrollView(
-              //   scrollDirection: Axis.horizontal,
-
-              // ),
-            ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -100,50 +166,73 @@ class ImageTour extends StatelessWidget {
   final String image;
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Row(
-        children: [
-          InkWell(
-            onTap: () {
-              Image.asset(
-                'assets/kettikkg.png',
-                width: 180,
-                height: 130,
-              );
-            },
-          ),
-          SizedBox(
-            width: 30,
-          ),
-          Image.asset(
-            'assets/bishtour.png',
-            width: 180,
-            height: 130,
-          ),
-          Column(
-            children: [
-              Row(
-                children: [
-                  Image.asset(
-                    'assets/fantravel.png',
-                    width: 180,
-                    height: 130,
+    return Container(
+      height: MediaQuery.of(context).copyWith().size.height * 0.30,
+      child: Expanded(
+        flex: 2,
+        child: Card(
+          color: Colors.white,
+          child: Column(children: [
+            Row(
+              children: [
+                const SizedBox(
+                  width: 10,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Image.asset(
+                    height:
+                        MediaQuery.of(context).copyWith().size.height * 0.11,
+                    'assets/bishtour.png',
                   ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Image.asset(
-                    'assets/asiatour.png',
-                    width: 180,
-                    height: 130,
-                  ),
-                ],
-              )
-            ],
-          )
-        ],
+                ),
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        InkWell(
+                          onTap: () {},
+                          child: Image.asset(
+                            height:
+                                MediaQuery.of(context).copyWith().size.height *
+                                    0.11,
+                            'assets/fantravel.png',
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        InkWell(
+                          onTap: () {},
+                          child: Image.asset(
+                            height:
+                                MediaQuery.of(context).copyWith().size.height *
+                                    0.11,
+                            'assets/asiatour.png',
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        InkWell(
+                          onTap: () {},
+                          child: Image.asset(
+                            height:
+                                MediaQuery.of(context).copyWith().size.height *
+                                    0.11,
+                            'assets/kettikkg.png',
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ],
+            ),
+          ]),
+        ),
       ),
-    ]);
+    );
   }
 }
 
@@ -158,23 +247,22 @@ class CustomImage extends StatelessWidget {
       child: Row(
         children: [
           Image.asset(
+            height: MediaQuery.of(context).copyWith().size.height * 0.21,
             'assets/tokio.png',
-            width: 125,
           ),
-          SizedBox(
+          const SizedBox(
             width: 5,
           ),
           Image.asset(
+            height: MediaQuery.of(context).copyWith().size.height * 0.21,
             'assets/sydney.png',
-            width: 125,
-            height: 160,
           ),
-          SizedBox(
+          const SizedBox(
             width: 5,
           ),
           Image.asset(
+            height: MediaQuery.of(context).copyWith().size.height * 0.21,
             'assets/amsterdam.png',
-            width: 125,
           ),
         ],
       ),
