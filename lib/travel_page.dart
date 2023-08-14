@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:miti_01/sport_screen.dart';
 import 'package:miti_01/tur_page.dart';
 
 class TravelPage extends StatefulWidget {
@@ -136,7 +137,12 @@ class _TravelPageState extends State<TravelPage> {
                     const SizedBox(width: 15),
                     Expanded(
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SportScreen()));
+                        },
                         child: Container(
                           width: 130,
                           height: 90,
@@ -172,7 +178,7 @@ class _TravelPageState extends State<TravelPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => TurPage()));
+                                  builder: (context) => const TurPage()));
                         },
                         child: Container(
                           width: 130,
@@ -235,7 +241,7 @@ class _TravelPageState extends State<TravelPage> {
                   ),
                   textAlign: TextAlign.end,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -340,7 +346,7 @@ class _TravelPageState extends State<TravelPage> {
                     Image.asset("assets/zanzibar.png"),
                   ],
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [

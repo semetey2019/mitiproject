@@ -94,30 +94,44 @@ class TurPageState extends State<TurPage> {
             const SizedBox(height: 15),
             Column(
               children: [
-                const Text(
-                  'Путешествия по КР',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Путешествия по КР',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 Container(
-                  child: Image.asset(
-                    "assets/turagent.png",
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(
+                        "assets/turagent.png",
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
+                      SizedBox(height: 10),
+                      Image.asset(
+                        "assets/turagent.png",
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                      ),
+                      SizedBox(height: 10),
+                      Image.asset(
+                        "assets/turagent.png",
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
+                    ],
                   ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Image.asset("assets/turagent.png"),
-                const SizedBox(
-                  height: 20,
-                ),
-                Image.asset(
-                  "assets/turagent.png",
                 ),
               ],
             ),
