@@ -12,11 +12,16 @@ class TurPageState extends State<TurPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Padding(
-          padding: EdgeInsets.only(left: 20),
-          child: Icon(
-            Icons.west,
-            size: 33,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: const Icon(
+              Icons.west,
+              size: 33,
+            ),
           ),
         ),
         title: const Center(
@@ -28,90 +33,96 @@ class TurPageState extends State<TurPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: ListView(children: [
-          TextField(
-            decoration: InputDecoration(
-              hintText: "Search...",
-              suffixIcon: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.keyboard_voice),
-              ),
-              prefixIcon: const Icon(Icons.search),
-              contentPadding: const EdgeInsets.symmetric(vertical: 12),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-            ),
-          ),
-          const SizedBox(height: 10),
-          const Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 15),
-                child: Text(
-                  'Топ городов',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        child: ListView(
+          children: [
+            TextField(
+              decoration: InputDecoration(
+                hintText: "Search...",
+                suffixIcon: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.keyboard_voice),
+                ),
+                prefixIcon: const Icon(Icons.search),
+                contentPadding: const EdgeInsets.symmetric(vertical: 12),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              SizedBox(
-                width: 85,
-              ),
-              Column(
-                children: [
-                  Text(
-                    'ПОСМОТРЕТЬ ВСЕ',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 115, 149, 207),
-                    ),
+            ),
+            const SizedBox(height: 10),
+            const Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 15),
+                  child: Text(
+                    'Топ городов',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          GridView.count(
-            crossAxisCount: 3,
-            shrinkWrap: true,
-            physics: const ScrollPhysics(),
-            children: [
-              Image.asset("assets/tokio.png"),
-              Image.asset("assets/sydney.png"),
-              Image.asset("assets/amsterdam.png"),
-            ],
-          ),
-          const SizedBox(height: 15),
-          Column(children: [
-            const Text(
-              'Путешествия по КР',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w700,
-              ),
+                ),
+                SizedBox(
+                  width: 85,
+                ),
+                Column(
+                  children: [
+                    Text(
+                      'ПОСМОТРЕТЬ ВСЕ',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 115, 149, 207),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
             const SizedBox(
               height: 20,
             ),
-            Container(
-              child: Image.asset(
-                "assets/turagent.png",
-              ),
+            GridView.count(
+              crossAxisCount: 3,
+              crossAxisSpacing: 1,
+              mainAxisSpacing: 5,
+              shrinkWrap: true,
+              physics: const ScrollPhysics(),
+              children: [
+                Image.asset("assets/tokio.png"),
+                Image.asset("assets/sydney.png"),
+                Image.asset("assets/amsterdam.png"),
+              ],
             ),
-            const SizedBox(
-              height: 20,
+            const SizedBox(height: 15),
+            Column(
+              children: [
+                const Text(
+                  'Путешествия по КР',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  child: Image.asset(
+                    "assets/turagent.png",
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Image.asset("assets/turagent.png"),
+                const SizedBox(
+                  height: 20,
+                ),
+                Image.asset(
+                  "assets/turagent.png",
+                ),
+              ],
             ),
-            Image.asset("assets/turagent.png"),
-            const SizedBox(
-              height: 20,
-            ),
-            Image.asset(
-              "assets/turagent.png",
-            ),
-          ]),
-        ]),
+          ],
+        ),
       ),
     );
   }

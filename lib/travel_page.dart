@@ -66,7 +66,7 @@ class _TravelPageState extends State<TravelPage> {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 115, 149, 207),
+                        color: Color.fromARGB(255, 98, 129, 182),
                       ),
                     ),
                   ],
@@ -168,7 +168,12 @@ class _TravelPageState extends State<TravelPage> {
                   children: [
                     Expanded(
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => TurPage()));
+                        },
                         child: Container(
                           width: 130,
                           height: 90,
@@ -232,6 +237,7 @@ class _TravelPageState extends State<TravelPage> {
                 ),
                 SizedBox(height: 10),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
                       child: Container(
@@ -242,29 +248,38 @@ class _TravelPageState extends State<TravelPage> {
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.grey[100],
                         ),
-                        child: Column(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             // ClipOval(),
                             Image.asset(
                               'assets/photo.png',
                               // fit: BoxFit.cover,
                             ),
-                            const Text(
-                              'Чат "Путешетвия"',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              ),
+                            const Column(
+                              children: [
+                                Text(
+                                  'Чат "Путешетвия"',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                Column(
+                                  children: [
+                                    Text(
+                                      '55k участников',
+                                      style: TextStyle(
+                                        color: Colors.blueAccent,
+                                        fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
 
-                            const Text(
-                              '55k участников',
-                              style: TextStyle(
-                                color: Colors.blueAccent,
-                                fontSize: 13,
-                              ),
-                            ),
                             ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
@@ -327,6 +342,7 @@ class _TravelPageState extends State<TravelPage> {
                 ),
                 SizedBox(height: 10),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
                       child: Container(
@@ -337,29 +353,38 @@ class _TravelPageState extends State<TravelPage> {
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.grey[100],
                         ),
-                        child: Column(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             // ClipOval(),
                             Image.asset(
                               'assets/photo.png',
                               // fit: BoxFit.cover,
                             ),
-                            const Text(
-                              'Чат "Путешетвия"',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              ),
+                            const Column(
+                              children: [
+                                Text(
+                                  'Чат "Путешетвия"',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                Column(
+                                  children: [
+                                    Text(
+                                      '55k участников',
+                                      style: TextStyle(
+                                        color: Colors.blueAccent,
+                                        fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
 
-                            const Text(
-                              '55k участников',
-                              style: TextStyle(
-                                color: Colors.blueAccent,
-                                fontSize: 13,
-                              ),
-                            ),
                             ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
@@ -382,18 +407,30 @@ class _TravelPageState extends State<TravelPage> {
                   children: [
                     Padding(
                       padding: EdgeInsets.only(left: 15),
-                      child: Text(
-                        'Путешествия по КР',
-                        style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Text(
-                      'ПОСМОТРЕТЬ ВСЕ',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 115, 149, 207),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Путешествия по КР',
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold),
+                          ),
+                          Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(left: 200),
+                                child: Text(
+                                  'ПОСМОТРЕТЬ ВСЕ',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromARGB(255, 115, 149, 207),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ],
