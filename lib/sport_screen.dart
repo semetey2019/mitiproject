@@ -13,6 +13,7 @@ class __SportScreenStateState extends State<_SportScreenState> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
+        elevation: 5,
       ),
     );
   }
