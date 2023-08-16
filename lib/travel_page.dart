@@ -39,11 +39,11 @@ class TravelPage extends StatelessWidget {
                         child: Text(
                           'Топ городов',
                           style: TextStyle(
-                              fontSize: 22, fontWeight: FontWeight.bold),
+                              fontSize: 22, fontWeight: FontWeight.normal),
                         ),
                       ),
                       SizedBox(
-                        width: 85,
+                        width: 15,
                       ),
                       Column(
                         children: [
@@ -51,7 +51,6 @@ class TravelPage extends StatelessWidget {
                             'ПОСМОТРЕТЬ ВСЕ',
                             style: TextStyle(
                               fontSize: 18,
-                              fontWeight: FontWeight.bold,
                               color: Color.fromARGB(255, 115, 149, 207),
                             ),
                           ),
