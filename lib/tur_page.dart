@@ -11,6 +11,7 @@ class TurPageState extends State<TurPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.only(left: 20),
@@ -94,10 +95,10 @@ class TurPageState extends State<TurPage> {
             const SizedBox(height: 15),
             Column(
               children: [
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Путешествия по КР',
                       style: TextStyle(
                         fontSize: 20,

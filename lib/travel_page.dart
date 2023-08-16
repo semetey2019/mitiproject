@@ -14,6 +14,7 @@ class _TravelPageState extends State<TravelPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
         leading: const Padding(
           padding: EdgeInsets.only(left: 20),
@@ -82,9 +83,21 @@ class _TravelPageState extends State<TravelPage> {
               shrinkWrap: true,
               physics: const ScrollPhysics(),
               children: [
-                Image.asset("assets/tokio.png"),
-                Image.asset("assets/sydney.png"),
-                Image.asset("assets/amsterdam.png"),
+                Image.asset(
+                  "assets/tokio.png",
+                  width: double.infinity,
+                  height: double.infinity,
+                ),
+                Image.asset(
+                  "assets/sydney.png",
+                  width: double.infinity,
+                  height: double.infinity,
+                ),
+                Image.asset(
+                  "assets/amsterdam.png",
+                  width: double.infinity,
+                  height: double.infinity,
+                ),
               ],
             ),
             const SizedBox(height: 15),
@@ -141,7 +154,7 @@ class _TravelPageState extends State<TravelPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => SportScreen()));
+                                  builder: (context) => TurFirms()));
                         },
                         child: Container(
                           width: 130,
@@ -232,14 +245,26 @@ class _TravelPageState extends State<TravelPage> {
                   ],
                 ),
                 const SizedBox(height: 10),
-                const Text(
-                  'ПОСМОТРЕТЬ ВСЕ',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 115, 149, 207),
-                  ),
-                  textAlign: TextAlign.end,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const TurFirms()));
+                      },
+                      child: const Text(
+                        'ПОСМОТРЕТЬ ВСЕ',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 115, 149, 207),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 10),
                 Row(
