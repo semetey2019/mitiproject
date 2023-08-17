@@ -37,4 +37,9 @@ class AppTextStyles {
       .textTheme
       .bodySmall!
       .copyWith(fontWeight: FontWeight.w400, fontSize: 13);
+
+  TextStyle get sportText => Theme.of(context)
+      .textTheme
+      .headlineSmall!
+      .copyWith(fontWeight: FontWeight.w600, fontSize: 18, color: Colors.white);
 }
