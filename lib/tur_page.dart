@@ -107,10 +107,12 @@ class TurPageState extends State<TurPage> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Image.asset(
-                      "assets/turagent.png",
-                      width: double.infinity,
-                      fit: BoxFit.cover,
+                    Container(
+                      child: Image.asset(
+                        "assets/turagent.png",
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                     const SizedBox(height: 10),
                     Image.asset(
