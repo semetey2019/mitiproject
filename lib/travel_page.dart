@@ -57,6 +57,22 @@ class _TravelPageState extends State<TravelPage> {
                     'Топ городов',
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
+                ],
+              ),
+              const Column(
+                children: [
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 15),
+                        child: Text(
+                          'Топ городов',
+                          style: TextStyle(
+                              fontSize: 22, fontWeight: FontWeight.normal),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 15,
                 ),
                 SizedBox(
                   width: 85,
@@ -444,7 +460,10 @@ class _TravelPageState extends State<TravelPage> {
                           Text(
                             'Путешествия по КР',
                             style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.bold),
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 115, 149, 207),
+                            ),
+                            fontSize: 22, fontWeight: FontWeight.bold),
                           ),
                           Column(
                             children: [
