@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:miti_01/sport_screen.dart';
+import 'package:miti_01/home/chat_buttom.dart';
+import 'package:miti_01/home/top_images.dart';
+import 'package:miti_01/home/tur_agents.dart';
+import 'package:miti_01/tur_firms.dart';
 import 'package:miti_01/tur_page.dart';
 
 class TravelPage extends StatefulWidget {
@@ -16,6 +19,7 @@ class _TravelPageState extends State<TravelPage> {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
+        backgroundColor: Colors.grey[100],
         leading: const Padding(
           padding: EdgeInsets.only(left: 20),
           child: Icon(
@@ -78,27 +82,10 @@ class _TravelPageState extends State<TravelPage> {
             const SizedBox(
               height: 20,
             ),
-            GridView.count(
-              crossAxisCount: 3,
-              shrinkWrap: true,
-              physics: const ScrollPhysics(),
-              children: [
-                Image.asset(
-                  "assets/tokio.png",
-                  width: double.infinity,
-                  height: double.infinity,
-                ),
-                Image.asset(
-                  "assets/sydney.png",
-                  width: double.infinity,
-                  height: double.infinity,
-                ),
-                Image.asset(
-                  "assets/amsterdam.png",
-                  width: double.infinity,
-                  height: double.infinity,
-                ),
-              ],
+            const TopImages(
+              image: "assets/tokio.png",
+              image1: 'assets/sydney.png',
+              image2: 'assets/amsterdam.png',
             ),
             const SizedBox(height: 15),
             Column(
@@ -121,29 +108,11 @@ class _TravelPageState extends State<TravelPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => TurPage()));
+                                  builder: (context) => const TurPage()));
                         },
-                        child: Container(
-                          width: 130,
-                          height: 90,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: Colors.orange, width: 1),
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Kettik.kg",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                "24 направлений",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                            ],
-                          ),
+                        child: const TurAgents(
+                          text: 'Kettik.kg',
+                          text1: '19 направлений',
                         ),
                       ),
                     ),
@@ -154,29 +123,11 @@ class _TravelPageState extends State<TravelPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => TurFirms()));
+                                  builder: (context) => const TurFirms()));
                         },
-                        child: Container(
-                          width: 130,
-                          height: 90,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: Colors.orange, width: 1),
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Bishkek Tour",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                "15 направлений",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                            ],
-                          ),
+                        child: const TurAgents(
+                          text: 'Bishkek Tour',
+                          text1: '15 направлений',
                         ),
                       ),
                     ),
@@ -193,53 +144,17 @@ class _TravelPageState extends State<TravelPage> {
                               MaterialPageRoute(
                                   builder: (context) => const TurPage()));
                         },
-                        child: Container(
-                          width: 130,
-                          height: 90,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: Colors.orange, width: 1),
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Asia  Tourism",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                "19 направлений",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                            ],
-                          ),
+                        child: const TurAgents(
+                          text: 'Fun Travels',
+                          text1: '20 направлений',
                         ),
                       ),
                     ),
                     const SizedBox(width: 15),
-                    Expanded(
-                      child: Container(
-                        width: 130,
-                        height: 90,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.orange, width: 1),
-                        ),
-                        child: const Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Fun Travels",
-                              style: TextStyle(color: Colors.orange),
-                            ),
-                            SizedBox(height: 10),
-                            Text(
-                              "24 направлений",
-                              style: TextStyle(color: Colors.orange),
-                            ),
-                          ],
-                        ),
+                    const Expanded(
+                      child: TurAgents(
+                        text: 'Asia  Tourism',
+                        text1: '17 направлений',
                       ),
                     ),
                   ],
@@ -267,64 +182,11 @@ class _TravelPageState extends State<TravelPage> {
                   ],
                 ),
                 const SizedBox(height: 10),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: Container(
-                        width: 10,
-                        padding: const EdgeInsets.all(15),
-                        margin: const EdgeInsets.symmetric(horizontal: 5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.grey[100],
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            // ClipOval(),
-                            Image.asset(
-                              'assets/photo.png',
-                              // fit: BoxFit.cover,
-                            ),
-                            const Column(
-                              children: [
-                                Text(
-                                  'Чат "Путешетвия"',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                                Column(
-                                  children: [
-                                    Text(
-                                      '55k участников',
-                                      style: TextStyle(
-                                        color: Colors.blueAccent,
-                                        fontSize: 13,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.orange,
-                              ),
-                              child: const Text(
-                                'Присоединиться',
-                                style: TextStyle(
-                                    fontSize: 12, color: Colors.black),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      child: ChatButtom(),
                     ),
                   ],
                 ),
@@ -359,78 +221,16 @@ class _TravelPageState extends State<TravelPage> {
                 const SizedBox(
                   height: 20,
                 ),
-                GridView.count(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 1,
-                  mainAxisSpacing: 5,
-                  shrinkWrap: true,
-                  physics: const ScrollPhysics(),
-                  children: [
-                    Image.asset("assets/bora.png"),
-                    Image.asset("assets/boracay.png"),
-                    Image.asset("assets/zanzibar.png"),
-                  ],
+                const TopImages(
+                  image: "assets/zanzibar.png",
+                  image1: 'assets/bora.png',
+                  image2: 'assets/boracay.png',
                 ),
                 const SizedBox(height: 10),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Expanded(
-                      child: Container(
-                        width: 10,
-                        padding: const EdgeInsets.all(15),
-                        margin: const EdgeInsets.symmetric(horizontal: 5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.grey[100],
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            // ClipOval(),
-                            Image.asset(
-                              'assets/photo.png',
-                              // fit: BoxFit.cover,
-                            ),
-                            const Column(
-                              children: [
-                                Text(
-                                  'Чат "Путешетвия"',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                                Column(
-                                  children: [
-                                    Text(
-                                      '55k участников',
-                                      style: TextStyle(
-                                        color: Colors.blueAccent,
-                                        fontSize: 13,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.orange,
-                              ),
-                              child: const Text(
-                                'Присоединиться',
-                                style: TextStyle(
-                                    fontSize: 12, color: Colors.black),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    Expanded(child: ChatButtom()),
                   ],
                 ),
                 const SizedBox(height: 10),
@@ -469,17 +269,10 @@ class _TravelPageState extends State<TravelPage> {
                 const SizedBox(
                   height: 20,
                 ),
-                GridView.count(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 1,
-                  mainAxisSpacing: 5,
-                  shrinkWrap: true,
-                  physics: const ScrollPhysics(),
-                  children: [
-                    Image.asset("assets/kyzart.png"),
-                    Image.asset("assets/gory.png"),
-                    Image.asset("assets/archa.png"),
-                  ],
+                const TopImages(
+                  image: "assets/kyzart.png",
+                  image1: 'assets/archa.png',
+                  image2: 'assets/gory.png',
                 ),
               ],
             ),

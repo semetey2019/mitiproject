@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miti_01/home/top_images.dart';
 
 class TurPage extends StatefulWidget {
   const TurPage({super.key});
@@ -80,17 +81,10 @@ class TurPageState extends State<TurPage> {
             const SizedBox(
               height: 20,
             ),
-            GridView.count(
-              crossAxisCount: 3,
-              crossAxisSpacing: 1,
-              mainAxisSpacing: 5,
-              shrinkWrap: true,
-              physics: const ScrollPhysics(),
-              children: [
-                Image.asset("assets/tokio.png"),
-                Image.asset("assets/sydney.png"),
-                Image.asset("assets/amsterdam.png"),
-              ],
+            const TopImages(
+              image: "assets/tokio.png",
+              image1: 'assets/sydney.png',
+              image2: 'assets/amsterdam.png',
             ),
             const SizedBox(height: 15),
             Column(
@@ -110,29 +104,27 @@ class TurPageState extends State<TurPage> {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Image.asset(
-                        "assets/turagent.png",
-                        width: double.infinity,
-                        fit: BoxFit.cover,
-                      ),
-                      SizedBox(height: 10),
-                      Image.asset(
-                        "assets/turagent.png",
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                      ),
-                      SizedBox(height: 10),
-                      Image.asset(
-                        "assets/turagent.png",
-                        width: double.infinity,
-                        fit: BoxFit.cover,
-                      ),
-                    ],
-                  ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Image.asset(
+                      "assets/turagent.png",
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                    const SizedBox(height: 10),
+                    Image.asset(
+                      "assets/turagent.png",
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                    ),
+                    const SizedBox(height: 10),
+                    Image.asset(
+                      "assets/turagent.png",
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                  ],
                 ),
               ],
             ),

@@ -50,7 +50,7 @@ class TurFirmsState extends State<TurFirms> {
                 ),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 30),
             const Row(
               children: [
                 Padding(
@@ -118,7 +118,7 @@ class TurGroup extends StatelessWidget {
             width: double.infinity,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
                 text,
