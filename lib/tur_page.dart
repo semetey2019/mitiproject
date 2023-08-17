@@ -102,7 +102,7 @@ class TurPageState extends State<TurPage> {
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 25,
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
