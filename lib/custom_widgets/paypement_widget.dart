@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../constants/apptexts_styles.dart';
-import '../constants/credit_cards.dart';
 import 'custom_text.dart';
 import 'divider_widget.dart';
 
@@ -9,11 +8,9 @@ class Paypement extends StatelessWidget {
   const Paypement({
     super.key,
     required this.appTextStyles,
-    required List<CreditCards> creditCards,
-  }) : _creditCards = creditCards;
+  });
 
   final AppTextStyles appTextStyles;
-  final List<CreditCards> _creditCards;
 
   @override
   Widget build(BuildContext context) {

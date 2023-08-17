@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:miti_01/examples/card_places2.dart';
 import 'package:miti_01/pages/booking_info_page.dart';
+import 'package:miti_01/travel_page.dart';
+import 'package:miti_01/tur_firms.dart';
 
 import '../examples/card_places.dart';
 import '../examples/custom_btn.dart';
@@ -20,7 +22,16 @@ class _BookingPageState extends State<BookingPage> {
       backgroundColor: Color(0xffF0F0F4),
       appBar: AppBar(
         backgroundColor: Color(0xffF0F0F4),
-        leading: Icon(Icons.arrow_back),
+        leading: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => TurFirms(),
+                ),
+              );
+            },
+            child: Icon(Icons.arrow_back)),
         title: Text(
           'Занять место',
           style: Theme.of(context)

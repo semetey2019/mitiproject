@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:miti_01/sport_screen.dart';
+import 'package:miti_01/tur_firms.dart';
 import 'package:miti_01/tur_page.dart';
 
 class TravelPage extends StatefulWidget {
@@ -57,306 +57,26 @@ class _TravelPageState extends State<TravelPage> {
                     'Топ городов',
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
-                ],
-              ),
-              const Column(
-                children: [
-                  Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: 15),
-                        child: Text(
-                          'Топ городов',
-                          style: TextStyle(
-                              fontSize: 22, fontWeight: FontWeight.normal),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 15,
-                ),
-                SizedBox(
-                  width: 85,
-                ),
-                Column(
-                  children: [
-                    Text(
-                      'ПОСМОТРЕТЬ ВСЕ',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 98, 129, 182),
-                      ),
-                    ),
-                  ],
                 ),
               ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            GridView.count(
-              crossAxisCount: 3,
-              shrinkWrap: true,
-              physics: const ScrollPhysics(),
-              children: [
-                Image.asset(
-                  "assets/tokio.png",
-                  width: double.infinity,
-                  height: double.infinity,
-                ),
-                Image.asset(
-                  "assets/sydney.png",
-                  width: double.infinity,
-                  height: double.infinity,
-                ),
-                Image.asset(
-                  "assets/amsterdam.png",
-                  width: double.infinity,
-                  height: double.infinity,
-                ),
-              ],
-            ),
-            const SizedBox(height: 15),
             Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'Путешествия по КР',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Row(
-                  children: [
-                    Expanded(
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => TurPage()));
-                        },
-                        child: Container(
-                          width: 130,
-                          height: 90,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: Colors.orange, width: 1),
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Kettik.kg",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                "24 направлений",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 15),
-                    Expanded(
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => TurFirms()));
-                        },
-                        child: Container(
-                          width: 130,
-                          height: 90,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: Colors.orange, width: 1),
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Bishkek Tour",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                "15 направлений",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 15),
-                Row(
-                  children: [
-                    Expanded(
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const TurPage()));
-                        },
-                        child: Container(
-                          width: 130,
-                          height: 90,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: Colors.orange, width: 1),
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Asia  Tourism",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                "19 направлений",
-                                style: TextStyle(color: Colors.orange),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 15),
-                    Expanded(
-                      child: Container(
-                        width: 130,
-                        height: 90,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.orange, width: 1),
-                        ),
-                        child: const Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Fun Travels",
-                              style: TextStyle(color: Colors.orange),
-                            ),
-                            SizedBox(height: 10),
-                            Text(
-                              "24 направлений",
-                              style: TextStyle(color: Colors.orange),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const TurFirms()));
-                      },
-                      child: const Text(
-                        'ПОСМОТРЕТЬ ВСЕ',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 115, 149, 207),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Expanded(
-                      child: Container(
-                        width: 10,
-                        padding: const EdgeInsets.all(15),
-                        margin: const EdgeInsets.symmetric(horizontal: 5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.grey[100],
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            // ClipOval(),
-                            Image.asset(
-                              'assets/photo.png',
-                              // fit: BoxFit.cover,
-                            ),
-                            const Column(
-                              children: [
-                                Text(
-                                  'Чат "Путешетвия"',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                                Column(
-                                  children: [
-                                    Text(
-                                      '55k участников',
-                                      style: TextStyle(
-                                        color: Colors.blueAccent,
-                                        fontSize: 13,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.orange,
-                              ),
-                              child: const Text(
-                                'Присоединиться',
-                                style: TextStyle(
-                                    fontSize: 12, color: Colors.black),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 10),
                 const Row(
                   children: [
                     Padding(
                       padding: EdgeInsets.only(left: 15),
                       child: Text(
-                        'Топ островов',
+                        'Топ городов',
                         style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.bold),
+                            fontSize: 22, fontWeight: FontWeight.normal),
                       ),
                     ),
                     SizedBox(
-                      width: 55,
+                      width: 15,
+                    ),
+                    SizedBox(
+                      width: 85,
                     ),
                     Column(
                       children: [
@@ -365,7 +85,7 @@ class _TravelPageState extends State<TravelPage> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 115, 149, 207),
+                            color: Color.fromARGB(255, 98, 129, 182),
                           ),
                         ),
                       ],
@@ -377,129 +97,413 @@ class _TravelPageState extends State<TravelPage> {
                 ),
                 GridView.count(
                   crossAxisCount: 3,
-                  crossAxisSpacing: 1,
-                  mainAxisSpacing: 5,
                   shrinkWrap: true,
                   physics: const ScrollPhysics(),
                   children: [
-                    Image.asset("assets/bora.png"),
-                    Image.asset("assets/boracay.png"),
-                    Image.asset("assets/zanzibar.png"),
+                    Image.asset(
+                      "assets/tokio.png",
+                      width: double.infinity,
+                      height: double.infinity,
+                    ),
+                    Image.asset(
+                      "assets/sydney.png",
+                      width: double.infinity,
+                      height: double.infinity,
+                    ),
+                    Image.asset(
+                      "assets/amsterdam.png",
+                      width: double.infinity,
+                      height: double.infinity,
+                    ),
                   ],
                 ),
-                const SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                const SizedBox(height: 15),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      child: Container(
-                        width: 10,
-                        padding: const EdgeInsets.all(15),
-                        margin: const EdgeInsets.symmetric(horizontal: 5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.grey[100],
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            // ClipOval(),
-                            Image.asset(
-                              'assets/photo.png',
-                              // fit: BoxFit.cover,
+                    const Text(
+                      'Путешествия по КР',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => TurPage()));
+                            },
+                            child: Container(
+                              width: 130,
+                              height: 90,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                border:
+                                    Border.all(color: Colors.orange, width: 1),
+                              ),
+                              child: const Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Kettik.kg",
+                                    style: TextStyle(color: Colors.orange),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Text(
+                                    "24 направлений",
+                                    style: TextStyle(color: Colors.orange),
+                                  ),
+                                ],
+                              ),
                             ),
-                            const Column(
+                          ),
+                        ),
+                        const SizedBox(width: 15),
+                        Expanded(
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => TurFirms()));
+                            },
+                            child: Container(
+                              width: 130,
+                              height: 90,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                border:
+                                    Border.all(color: Colors.orange, width: 1),
+                              ),
+                              child: const Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Bishkek Tour",
+                                    style: TextStyle(color: Colors.orange),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Text(
+                                    "15 направлений",
+                                    style: TextStyle(color: Colors.orange),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 15),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const TurPage()));
+                            },
+                            child: Container(
+                              width: 130,
+                              height: 90,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                border:
+                                    Border.all(color: Colors.orange, width: 1),
+                              ),
+                              child: const Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Asia  Tourism",
+                                    style: TextStyle(color: Colors.orange),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Text(
+                                    "19 направлений",
+                                    style: TextStyle(color: Colors.orange),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 15),
+                        Expanded(
+                          child: Container(
+                            width: 130,
+                            height: 90,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              border:
+                                  Border.all(color: Colors.orange, width: 1),
+                            ),
+                            child: const Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Чат "Путешетвия"',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  ),
+                                  "Fun Travels",
+                                  style: TextStyle(color: Colors.orange),
                                 ),
-                                Column(
-                                  children: [
-                                    Text(
-                                      '55k участников',
-                                      style: TextStyle(
-                                        color: Colors.blueAccent,
-                                        fontSize: 13,
-                                      ),
-                                    ),
-                                  ],
+                                SizedBox(height: 10),
+                                Text(
+                                  "24 направлений",
+                                  style: TextStyle(color: Colors.orange),
                                 ),
                               ],
                             ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const TurFirms()));
+                          },
+                          child: const Text(
+                            'ПОСМОТРЕТЬ ВСЕ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 115, 149, 207),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Expanded(
+                          child: Container(
+                            width: 10,
+                            padding: const EdgeInsets.all(15),
+                            margin: const EdgeInsets.symmetric(horizontal: 5),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.grey[100],
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                // ClipOval(),
+                                Image.asset(
+                                  'assets/photo.png',
+                                  // fit: BoxFit.cover,
+                                ),
+                                const Column(
+                                  children: [
+                                    Text(
+                                      'Чат "Путешетвия"',
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Column(
+                                      children: [
+                                        Text(
+                                          '55k участников',
+                                          style: TextStyle(
+                                            color: Colors.blueAccent,
+                                            fontSize: 13,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
 
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.orange,
-                              ),
-                              child: const Text(
-                                'Присоединиться',
-                                style: TextStyle(
-                                    fontSize: 12, color: Colors.black),
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.orange,
+                                  ),
+                                  child: const Text(
+                                    'Присоединиться',
+                                    style: TextStyle(
+                                        fontSize: 12, color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 15),
+                          child: Text(
+                            'Топ островов',
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 55,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              'ПОСМОТРЕТЬ ВСЕ',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 115, 149, 207),
                               ),
                             ),
                           ],
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                const Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 15),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Путешествия по КР',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Color.fromARGB(255, 115, 149, 207),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    GridView.count(
+                      crossAxisCount: 3,
+                      crossAxisSpacing: 1,
+                      mainAxisSpacing: 5,
+                      shrinkWrap: true,
+                      physics: const ScrollPhysics(),
+                      children: [
+                        Image.asset("assets/bora.png"),
+                        Image.asset("assets/boracay.png"),
+                        Image.asset("assets/zanzibar.png"),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Expanded(
+                          child: Container(
+                            width: 10,
+                            padding: const EdgeInsets.all(15),
+                            margin: const EdgeInsets.symmetric(horizontal: 5),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.grey[100],
                             ),
-                            fontSize: 22, fontWeight: FontWeight.bold),
-                          ),
-                          Column(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(left: 200),
-                                child: Text(
-                                  'ПОСМОТРЕТЬ ВСЕ',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromARGB(255, 115, 149, 207),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                // ClipOval(),
+                                Image.asset(
+                                  'assets/photo.png',
+                                  // fit: BoxFit.cover,
+                                ),
+                                const Column(
+                                  children: [
+                                    Text(
+                                      'Чат "Путешетвия"',
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Column(
+                                      children: [
+                                        Text(
+                                          '55k участников',
+                                          style: TextStyle(
+                                            color: Colors.blueAccent,
+                                            fontSize: 13,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.orange,
+                                  ),
+                                  child: const Text(
+                                    'Присоединиться',
+                                    style: TextStyle(
+                                        fontSize: 12, color: Colors.black),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
+                    const SizedBox(height: 10),
+                    const Row(children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 15),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Путешествия по КР',
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 115, 149, 207),
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Column(
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 200),
+                                    child: Text(
+                                      'ПОСМОТРЕТЬ ВСЕ',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color:
+                                            Color.fromARGB(255, 115, 149, 207),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ]),
+                      ),
+                    ]),
                   ],
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                GridView.count(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 1,
-                  mainAxisSpacing: 5,
-                  shrinkWrap: true,
-                  physics: const ScrollPhysics(),
-                  children: [
-                    Image.asset("assets/kyzart.png"),
-                    Image.asset("assets/gory.png"),
-                    Image.asset("assets/archa.png"),
-                  ],
-                ),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            GridView.count(
+              crossAxisCount: 3,
+              crossAxisSpacing: 1,
+              mainAxisSpacing: 5,
+              shrinkWrap: true,
+              physics: const ScrollPhysics(),
+              children: [
+                Image.asset("assets/kyzart.png"),
+                Image.asset("assets/gory.png"),
+                Image.asset("assets/archa.png"),
               ],
             ),
           ],
