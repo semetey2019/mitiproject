@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:miti_01/constants/apptexts_styles.dart';
+import 'package:miti_01/pages/booking_page.dart';
+import 'package:miti_01/tur_firms.dart';
 
 class GroupChat extends StatefulWidget {
   const GroupChat({super.key});
@@ -17,7 +19,16 @@ class _GroupChatState extends State<GroupChat> {
       appBar: AppBar(
         shadowColor: Colors.grey,
         elevation: 0.4,
-        leading: Icon(Icons.arrow_back),
+        leading: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => TurFirms(),
+                ),
+              );
+            },
+            child: Icon(Icons.arrow_back)),
         centerTitle: true,
         title: Column(
           children: [

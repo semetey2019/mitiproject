@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:miti_01/pages/booking_page.dart';
+import 'package:miti_01/travel_page.dart';
 
 class TurFirms extends StatefulWidget {
   const TurFirms({super.key});
@@ -17,7 +19,12 @@ class TurFirmsState extends State<TurFirms> {
           padding: const EdgeInsets.only(left: 20),
           child: InkWell(
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => TravelPage(),
+                ),
+              );
             },
             child: const Icon(
               Icons.west,
@@ -69,11 +76,21 @@ class TurFirmsState extends State<TurFirms> {
               text2: 'Пик Ленина ,горная база',
             ),
             const SizedBox(height: 15),
-            const TurGroup(
-              image: 'assets/like.png',
-              text: 'Тур по Иссык-Кулю',
-              text1: '\$40 за тур',
-              text2: 'Иссык-Кульская область, город Чолпон-Ата',
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => BookingPage(),
+                  ),
+                );
+              },
+              child: const TurGroup(
+                image: 'assets/like.png',
+                text: 'Тур по Иссык-Кулю',
+                text1: '\$40 за тур',
+                text2: 'Иссык-Кульская область, город Чолпон-Ата',
+              ),
             ),
             const SizedBox(height: 15),
             const TurGroup(

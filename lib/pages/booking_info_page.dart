@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:miti_01/constants/apptexts_styles.dart';
-import 'package:miti_01/constants/credit_cards.dart';
 import 'package:miti_01/examples/custom_btn.dart';
 import 'package:miti_01/pages/group_chat.dart';
 
 import '../custom_widgets/complete_dialog.dart';
 import '../custom_widgets/custom_text.dart';
 import '../custom_widgets/details_widget.dart';
-import '../custom_widgets/ellipse.dart';
 import '../custom_widgets/paypement_widget.dart';
 
 class BookingInfo extends StatelessWidget {
@@ -15,7 +13,6 @@ class BookingInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<CreditCards> _creditCards = creditCards;
     final appTextStyles = AppTextStyles(context);
 
     return Scaffold(
@@ -116,7 +113,7 @@ class BookingInfo extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            Paypement(appTextStyles: appTextStyles, creditCards: _creditCards),
+            Paypement(appTextStyles: appTextStyles),
             const SizedBox(
               height: 32,
             ),
@@ -166,6 +163,8 @@ class BookingInfo extends StatelessWidget {
                         Center(
                           child: CustomButton(
                             onpressed: () {
+                              Navigator.pop(context);
+
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
