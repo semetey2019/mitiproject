@@ -156,45 +156,6 @@ class _GroupChatState extends State<GroupChat> {
           SizedBox(
             height: 116,
           ),
-          // Column(
-          //   children: [
-          //     Row(
-          //       children: [
-          //         // Padding(
-          //         //   padding: const EdgeInsets.only(
-          //         //       left: 35, top: 12, right: 30, bottom: 16),
-          //         //   child: Icon(
-          //         //     Icons.add_box_outlined,
-          //         //     size: 30,
-          //         //     color: Colors.amber,
-          //         //   ),
-          //         // ),
-          //         Container(
-          //           width: 220,
-          //           height: 40,
-          //           child: TextField(
-          //             decoration: InputDecoration(
-          //               prefixIcon: Icon(Icons.add),
-          //               border: InputBorder.none, // Adjust the radius as needed
-
-          //               hintText: 'Enter text...',
-          //               hintStyle: TextStyle(color: Colors.orange),
-          //             ),
-          //           ),
-          //         ),
-          //         Padding(
-          //           padding: const EdgeInsets.only(
-          //               left: 20, right: 10, top: 12, bottom: 18),
-          //           child: Icon(
-          //             Icons.send_outlined,
-          //             size: 30,
-          //             color: Colors.amber,
-          //           ),
-          //         )
-          //       ],
-          //     ),
-          //   ],
-          // ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: TextField(
