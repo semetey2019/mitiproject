@@ -9,22 +9,22 @@ import '../custom_widgets/details_widget.dart';
 import '../custom_widgets/paypement_widget.dart';
 
 class BookingInfo extends StatelessWidget {
-  BookingInfo({super.key});
+  const BookingInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
     final appTextStyles = AppTextStyles(context);
 
     return Scaffold(
-      backgroundColor: Color(0xffF0F0F4),
+      backgroundColor: const Color(0xffF0F0F4),
       appBar: AppBar(
-        backgroundColor: Color(0xffF0F0F4),
+        backgroundColor: const Color(0xffF0F0F4),
         title: Text('Тур по ИК', style: appTextStyles.appBarTitle),
         leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
-            child: Icon(Icons.arrow_back)),
+            child: const Icon(Icons.arrow_back)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -124,7 +124,7 @@ class BookingInfo extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            Details(
+            const Details(
               text1: 'Сумма',
               text2: '1500 сом',
             ),
@@ -169,18 +169,18 @@ class BookingInfo extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      GroupChat(),
+                                      const GroupChat(),
                                 ),
                               );
                             },
-                            child: Text('Ок спасибо'),
+                            child: const Text('Ок спасибо'),
                           ),
                         )
                       ],
                     ),
                   ),
                 },
-                child: Text('Оплатить'),
+                child: const Text('Оплатить'),
               ),
             )
           ],

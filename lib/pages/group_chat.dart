@@ -1,8 +1,6 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:miti_01/constants/apptexts_styles.dart';
-import 'package:miti_01/pages/booking_page.dart';
+
 import 'package:miti_01/tur_firms.dart';
 
 import '../custom_widgets/dialog_widget.dart';
