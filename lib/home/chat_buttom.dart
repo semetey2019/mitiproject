@@ -31,16 +31,12 @@ class ChatButtom extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              Column(
-                children: [
-                  Text(
-                    '55k участников',
-                    style: TextStyle(
-                      color: Colors.blueAccent,
-                      fontSize: 13,
-                    ),
-                  ),
-                ],
+              Text(
+                '55k участников',
+                style: TextStyle(
+                  color: Colors.blueAccent,
+                  fontSize: 13,
+                ),
               ),
             ],
           ),

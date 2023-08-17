@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miti_01/home/sport_part.dart';
 
 class SportScreen extends StatefulWidget {
   const SportScreen({super.key});
@@ -14,11 +15,16 @@ class _SportScreenState extends State<SportScreen> {
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
         backgroundColor: Colors.grey[100],
-        leading: const Padding(
-          padding: EdgeInsets.only(left: 20),
-          child: Icon(
-            Icons.west,
-            size: 33,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: const Icon(
+              Icons.west,
+              size: 33,
+            ),
           ),
         ),
         title: const Center(
@@ -46,12 +52,26 @@ class _SportScreenState extends State<SportScreen> {
                 ),
               ),
             ),
-            Stack(children: [Image.asset('assets/chess.png'), Text("mvd")]),
-            Image.asset('assets/chess.png'),
-            Image.asset('assets/chess.png'),
-            Image.asset('assets/chess.png'),
-            Image.asset('assets/chess.png'),
-            Image.asset('assets/chess.png'),
+            const SizedBox(height: 30),
+            const SportPart(
+              image: 'assets/soccer.png',
+              text: 'Фудбол',
+            ),
+            const SizedBox(height: 15),
+            const SportPart(
+              image: 'assets/chess.png',
+              text: 'Шахмат',
+            ),
+            const SizedBox(height: 15),
+            const SportPart(
+              image: 'assets/baskedbol.png',
+              text: 'Баскедбол',
+            ),
+            const SizedBox(height: 15),
+            const SportPart(
+              image: 'assets/sky.png',
+              text: 'Лыжа',
+            ),
           ],
         ),
       ),

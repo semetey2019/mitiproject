@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miti_01/home/name_tur_firms.dart';
 import 'package:miti_01/home/top_images.dart';
 
 class TurPage extends StatefulWidget {
@@ -87,9 +88,9 @@ class TurPageState extends State<TurPage> {
               image2: 'assets/amsterdam.png',
             ),
             const SizedBox(height: 15),
-            Column(
+            const Column(
               children: [
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
@@ -101,31 +102,17 @@ class TurPageState extends State<TurPage> {
                     ),
                   ],
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 25,
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      child: Image.asset(
-                        "assets/turagent.png",
-                        width: double.infinity,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    Image.asset(
-                      "assets/turagent.png",
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                    ),
-                    const SizedBox(height: 10),
-                    Image.asset(
-                      "assets/turagent.png",
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                    ),
+                    NameTurFirms(),
+                    SizedBox(height: 10),
+                    NameTurFirms(),
+                    SizedBox(height: 10),
+                    NameTurFirms(),
                   ],
                 ),
               ],
