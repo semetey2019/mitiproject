@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:miti_01/pages/group_chat.dart';
+import 'package:miti_01/pages/page_for_sport.dart';
 
 class ChatButtom extends StatelessWidget {
   const ChatButtom({super.key});
@@ -42,7 +44,10 @@ class ChatButtom extends StatelessWidget {
           ),
 
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => GroupChat()));
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.orange,
             ),

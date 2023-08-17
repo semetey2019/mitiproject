@@ -7,7 +7,7 @@ class DividerLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Divider(
+    return const Divider(
       color: Color.fromARGB(255, 187, 187, 187),
     );
   }

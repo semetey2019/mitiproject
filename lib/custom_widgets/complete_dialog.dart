@@ -15,7 +15,7 @@ class Complete extends StatelessWidget {
         Stack(
           children: [
             Container(
-              margin: EdgeInsets.all(15),
+              margin: const EdgeInsets.all(15),
               width: 100,
               height: 100,
               decoration: BoxDecoration(
@@ -57,83 +57,83 @@ class Complete extends StatelessWidget {
                 ],
               ),
             ),
-            Ellipse(
+            const Ellipse(
               width: 12,
               height: 12,
               radius: 6,
               top: 15,
               left: 20,
             ),
-            Ellipse(
+            const Ellipse(
               width: 9,
               height: 9,
               radius: 4.5,
               left: 115,
               top: 30,
             ),
-            Ellipse(
+            const Ellipse(
               width: 6,
               height: 6,
               radius: 3,
               left: 100,
               top: 10,
             ),
-            Ellipse(
+            const Ellipse(
               width: 6,
               height: 6,
               radius: 3,
               left: 122,
               top: 20,
             ),
-            Ellipse(
+            const Ellipse(
               width: 6,
               height: 6,
               radius: 3,
               left: 122,
               top: 60,
             ),
-            Ellipse(
+            const Ellipse(
               width: 6,
               height: 6,
               radius: 3,
               left: 50,
             ),
-            Ellipse(
+            const Ellipse(
               width: 15,
               height: 15,
               radius: 8,
               left: 10,
               top: 110,
             ),
-            Ellipse(
+            const Ellipse(
               width: 10,
               height: 10,
               radius: 5,
               left: 50,
               top: 120,
             ),
-            Ellipse(
+            const Ellipse(
               width: 6,
               height: 6,
               radius: 3,
               left: 90,
               top: 122,
             ),
-            Ellipse(
+            const Ellipse(
               width: 10,
               height: 10,
               radius: 5,
               left: 105,
               top: 100,
             ),
-            Ellipse(
+            const Ellipse(
               width: 12,
               height: 12,
               radius: 6,
               left: 115,
               top: 110,
             ),
-            Ellipse(
+            const Ellipse(
               width: 8,
               height: 8,
               radius: 4,

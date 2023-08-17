@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miti_01/pages/booking_page.dart';
-import 'package:miti_01/travel_page.dart';
+import 'package:miti_01/pages/travel_page.dart';
 
 class TurFirms extends StatefulWidget {
   const TurFirms({super.key});

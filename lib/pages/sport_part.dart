@@ -6,33 +6,35 @@ class SportPart extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      Image.asset(
-        image,
-      ),
-      Padding(
-        padding: const EdgeInsets.only(top: 140),
-        child: InkWell(
-          onTap: () {},
-          child: Container(
-            height: 30,
-            width: 375,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              color: const Color(0xCCFF9500),
-            ),
-            child: Center(
-              child: Text(
-                text,
-                style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.white),
+    return Center(
+      child: Stack(children: [
+        Image.asset(
+          image,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 140),
+          child: InkWell(
+            onTap: () {},
+            child: Container(
+              height: 30,
+              width: 375,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: const Color(0xCCFF9500),
+              ),
+              child: Center(
+                child: Text(
+                  text,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.white),
+                ),
               ),
             ),
           ),
         ),
-      ),
-    ]);
+      ]),
+    );
   }
 }

@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:miti_01/home/chat_buttom.dart';
 import 'package:miti_01/home/top_images.dart';
 import 'package:miti_01/home/tur_agents.dart';
+import 'package:miti_01/pages/page_for_sport.dart';
 import 'package:miti_01/pages/sport_screen.dart';
-import 'package:miti_01/tur_firms.dart';
-import 'package:miti_01/tur_page.dart';
+import 'package:miti_01/pages/tur_firms.dart';
+import 'package:miti_01/pages/tur_page.dart';
 
 class TravelPage extends StatefulWidget {
   const TravelPage({super.key});
@@ -135,10 +136,18 @@ class _TravelPageState extends State<TravelPage> {
                       ),
                     ),
                     const SizedBox(width: 15),
-                    const Expanded(
-                      child: TurAgents(
-                        text: 'Asia  Tourism',
-                        text1: '17 направлений',
+                    Expanded(
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SportPage()));
+                        },
+                        child: const TurAgents(
+                          text: 'Asia  Tourism',
+                          text1: '17 направлений',
+                        ),
                       ),
                     ),
                   ],

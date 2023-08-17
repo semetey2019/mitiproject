@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:miti_01/travel_page.dart';
+import 'package:miti_01/pages/travel_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

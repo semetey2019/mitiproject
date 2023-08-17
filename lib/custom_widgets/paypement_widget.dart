@@ -54,7 +54,7 @@ class Paypement extends StatelessWidget {
                       const SizedBox(
                         height: 16,
                       ),
-                      DividerLine(),
+                      const DividerLine(),
                       ListView.builder(
                           itemCount: 1,
                           shrinkWrap: true,
@@ -74,7 +74,7 @@ class Paypement extends StatelessWidget {
                                     ),
                                   ),
                                   selected: true,
-                                  leading: Icon(Icons.credit_card),
+                                  leading: const Icon(Icons.credit_card),
                                   title: const Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -84,30 +84,30 @@ class Paypement extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                DividerLine(),
+                                const DividerLine(),
                                 const ListTile(
                                   leading: Icon(
                                     Icons.attach_money_rounded,
                                   ),
                                   title: Text('Наличными'),
                                 ),
-                                Divider(),
+                                const Divider(),
                                 ListTile(
                                   leading: Image.asset(
                                     'assets/mbank-logo.png',
                                     width: 30,
                                     height: 30,
                                   ),
-                                  title: Text('Мбанк'),
+                                  title: const Text('Мбанк'),
                                 ),
-                                Divider(),
+                                const Divider(),
                                 const ListTile(
                                   leading: Icon(
                                     Icons.add,
                                   ),
                                   title: Text('Добавить новую карту'),
                                 ),
-                                Divider(),
+                                const Divider(),
                               ],
                             );
                           })
@@ -125,11 +125,11 @@ class Paypement extends StatelessWidget {
               Container(
                 width: 48,
                 height: 43,
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(6),
                     color: Colors.orange),
-                child: Icon(
+                child: const Icon(
                   Icons.credit_card,
                   color: Colors.white,
                 ),
@@ -140,7 +140,7 @@ class Paypement extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Visa Classic'),
+                  const Text('Visa Classic'),
                   Text(
                     '****-9534',
                     style: Theme.of(context).textTheme.labelSmall,
@@ -149,7 +149,7 @@ class Paypement extends StatelessWidget {
               )
             ],
           ),
-          Icon(
+          const Icon(
             Icons.keyboard_arrow_right,
             size: 30,
           )

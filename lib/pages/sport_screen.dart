@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:miti_01/home/sport_part.dart';
+import 'package:miti_01/pages/sport_part.dart';
 
 class SportScreen extends StatefulWidget {
   const SportScreen({super.key});

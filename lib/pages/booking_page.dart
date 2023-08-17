@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:miti_01/examples/card_places2.dart';
 import 'package:miti_01/pages/booking_info_page.dart';
-import 'package:miti_01/travel_page.dart';
-import 'package:miti_01/tur_firms.dart';
+
+import 'package:miti_01/pages/tur_firms.dart';
 
 import '../examples/card_places.dart';
 import '../examples/custom_btn.dart';
