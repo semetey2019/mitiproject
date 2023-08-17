@@ -29,4 +29,12 @@ class AppTextStyles {
       .textTheme
       .headlineSmall!
       .copyWith(fontWeight: FontWeight.bold, fontSize: 16);
+  TextStyle get authorText => Theme.of(context)
+      .textTheme
+      .headlineSmall!
+      .copyWith(fontWeight: FontWeight.w600, fontSize: 12);
+  TextStyle get dialogText => Theme.of(context)
+      .textTheme
+      .bodySmall!
+      .copyWith(fontWeight: FontWeight.w400, fontSize: 13);
 }
